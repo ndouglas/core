@@ -511,6 +511,11 @@ if ($_POST['selectedtype'] != "Static") {
         <id>5</id>
         <title>Configure LAN Interface</title>
         <description>On this screen we will configure the Local Area Network information.</description>
+        <javascriptafterformdisplay>
+            if (jQuery('#ipaddress').val() == 'dhcp') {
+            jQuery('#ipaddress').val('');
+            }
+        </javascriptafterformdisplay>
         <fields>
             <field>
                 <name>LAN IP Address</name>
